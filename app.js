@@ -30,7 +30,7 @@ function buildHtmlElements(responseData){
     let opening_crawl = document.createElement("p");
     opening_crawl.id = "film-crawl";
     $(opening_crawl).appendTo($(".film"));
-     document.getElementById("film-crawl").innerHTML = "Opening Crawl: " + responseData.opening_crawl;
+     document.getElementById("film-crawl").innerHTML = "Opening Crawl: " + responseData.opening_crawl; 
 }  
 
 function getFilmData(id){
