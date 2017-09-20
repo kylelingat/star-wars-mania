@@ -40,7 +40,21 @@ $.ajax({
   cache: false,
   dataType: "json",
   success: function getFilmData(id){
-    buildHtmlElements(id.results[4])
+    if(document.getElementById('selectid').value == "ep1") {
+      buildHtmlElements(id.results[2])
+    } else if(document.getElementById('selectid').value == "ep2") {
+      buildHtmlElements(id.results[1])
+    } else if(document.getElementById('selectid').value == "ep3") {
+      buildHtmlElements(id.results[3])
+    } else if(document.getElementById('selectid').value == "ep4") {
+      buildHtmlElements(id.results[0])
+    } else if(document.getElementById('selectid').value == "ep5") {
+      buildHtmlElements(id.results[5])
+    } else if (document.getElementById('selectid').value == "ep6") {
+      buildHtmlElements(id.results[4])
+    } else if (document.getElementById('selectid').value == "ep7") {
+      buildHtmlElements(id.results[6])
+    }
   },
   error: function(a,b,c){
         alert("There has been an error! Try again...");
