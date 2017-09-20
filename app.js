@@ -21,6 +21,16 @@ function buildHtmlElements(responseData){
     date.id = "film-date";
     $(date).appendTo($(".film"));
      document.getElementById("film-date").innerHTML = "Date: " + responseData.release_date;
+
+    let producer = document.createElement("p");
+    producer.id = "film-producer";
+    $(producer).appendTo($(".film"));
+     document.getElementById("film-producer").innerHTML = "Producer: " + responseData.producer;
+
+    let opening_crawl = document.createElement("p");
+    opening_crawl.id = "film-crawl";
+    $(opening_crawl).appendTo($(".film"));
+     document.getElementById("film-crawl").innerHTML = "Opening Crawl: " + responseData.opening_crawl;
 }  
 
 function getFilmData(id){
