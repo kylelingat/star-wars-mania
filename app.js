@@ -6,6 +6,7 @@ function buildHtmlElements(responseData){
     $(title).appendTo($(".film"));
     document.getElementById("film-title").innerHTML = `Title: ${responseData.title}`;
 
+    
     let episode = document.createElement("p");
     episode.id = "film-episode";
     $(episode).appendTo($(".film"))
@@ -39,19 +40,19 @@ $.ajax({
   cache: false,
   dataType: "json",
   success: function getFilmData(id){
-    if(document.getElementById('selectid').value == "ep1") {
+    if(document.getElementById('select').value == "ep1") {
       buildHtmlElements(id.results[2])
-    } else if(document.getElementById('selectid').value == "ep2") {
+    } else if(document.getElementById('select').value == "ep2") {
       buildHtmlElements(id.results[1])
-    } else if(document.getElementById('selectid').value == "ep3") {
+    } else if(document.getElementById('select').value == "ep3") {
       buildHtmlElements(id.results[3])
-    } else if(document.getElementById('selectid').value == "ep4") {
+    } else if(document.getElementById('select').value == "ep4") {
       buildHtmlElements(id.results[0])
-    } else if(document.getElementById('selectid').value == "ep5") {
+    } else if(document.getElementById('select').value == "ep5") {
       buildHtmlElements(id.results[5])
-    } else if (document.getElementById('selectid').value == "ep6") {
+    } else if (document.getElementById('select').value == "ep6") {
       buildHtmlElements(id.results[4])
-    } else if (document.getElementById('selectid').value == "ep7") {
+    } else if (document.getElementById('select').value == "ep7") {
       buildHtmlElements(id.results[6])
     }
   },
