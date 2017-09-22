@@ -4,33 +4,32 @@ function buildHtmlElements(responseData){
     let title = document.createElement('h2');
     title.id = 'film-title';
     $(title).appendTo($(".film"));
-    document.getElementById("film-title").innerHTML = "Title: " + responseData.title;
+    document.getElementById("film-title").innerHTML = `Title: ${responseData.title}`;
 
-    
     let episode = document.createElement("p");
     episode.id = "film-episode";
     $(episode).appendTo($(".film"))
-    document.getElementById("film-episode").innerHTML = "Episode: " + responseData.episode_id;
+    document.getElementById("film-episode").innerHTML = `Episode: ${responseData.episode_id}`;
 
     let director = document.createElement("p");
     director.id = "film-director";
     $(director).appendTo($(".film"));
-    document.getElementById("film-director").innerHTML = "Director: " + responseData.director;
+    document.getElementById("film-director").innerHTML = `Director: ${responseData.director}`;
     
     let date = document.createElement("p");
     date.id = "film-date";
     $(date).appendTo($(".film"));
-     document.getElementById("film-date").innerHTML = "Date: " + responseData.release_date;
+     document.getElementById("film-date").innerHTML = `Date: ${responseData.release_date}`;
 
     let producer = document.createElement("p");
     producer.id = "film-producer";
     $(producer).appendTo($(".film"));
-     document.getElementById("film-producer").innerHTML = "Producer: " + responseData.producer;
+     document.getElementById("film-producer").innerHTML = `Producer: ${responseData.producer}`;
 
     let opening_crawl = document.createElement("p");
     opening_crawl.id = "film-crawl";
     $(opening_crawl).appendTo($(".film"));
-     document.getElementById("film-crawl").innerHTML = "Opening Crawl: " + responseData.opening_crawl; 
+     document.getElementById("film-crawl").innerHTML = `Opening Crawl: ${responseData.opening_crawl}`; 
 }  
 
 function getFilmData(id){
@@ -56,7 +55,7 @@ $.ajax({
       buildHtmlElements(id.results[6])
     }
   },
-  error: function(a,b,c){
+  error(a, b, c) {
         alert("There has been an error! Try again...");
   } 
 });
